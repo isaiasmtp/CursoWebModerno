@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" routerLink="/">Home</a>
+
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+        <li class="nav-item">
+          <a class="nav-link " routerLinkActive = "active" routerLink="/login">Login</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive = "active" routerLink="/cursos" [queryParams] = "{pagina:1}">Cursos</a>
+        </li>
+        
+        <li class="nav-item">
+             <a class="nav-link" routerLinkActive = "active" routerLink="/alunos">Alunos</a>
+           </li>
+        
+
+      </ul>
+  </nav>
+  
+<br>
+<div class = "container">
+    <router-outlet></router-outlet>
+</div>
+
+
+
+
+
+
+
+
+

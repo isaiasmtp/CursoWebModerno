@@ -1,0 +1,26 @@
+<div class="row">
+  <div class="col-sm">
+      <p>
+          Lista de Alunos
+      </p>
+      <div *ngIf="verificaArray()">
+          <div class="list-group" *ngIf="!alunos.lenght > 0">
+              <a class="list-group-item list-group-item-action" *ngFor="let aluno of alunos" [routerLink]="[aluno.id]"> {{aluno.nome}} </a>
+          </div>
+      </div>
+
+      <div *ngIf="!verificaArray()">
+          <p>Não existe usuario cadastrado!</p>
+          <div class="col-sm">
+              <button class="btn btn-primary" (click) = "cadastrar()">Cadastrar</button>
+          </div>
+          
+      </div>
+
+  </div>
+
+  <div class="col-sm">
+      <router-outlet></router-outlet>
+  </div>
+
+</div>
