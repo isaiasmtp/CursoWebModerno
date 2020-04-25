@@ -3,7 +3,11 @@ function Pessoa() {
 
     setInterval(() => {
         this.idade++;
-        console.log(this.idade);
+
+        if(this.idade == 10){
+            console.log(this.idade);
+        }
+        
     },1000)
 }
 
