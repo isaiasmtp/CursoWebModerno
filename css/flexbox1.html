@@ -4,14 +4,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Flexbox #01</title>
-    <link rel="stylesheet" href="css/tag.css">
+    <!-- <link rel="stylesheet" href="css/tag.css"> -->
     <style>
-        /* ... */
+        div{
+            border: solid 5px dodgerblue;
+            font-size: 40px;
+            margin: 5px;
+        }
+        .big{
+            font-size: 1.5em;
+        }
+        .flex-container{
+            display: flex;
+            flex-direction: row;
+            width: 50%;
+            flex-wrap: wrap;
+            height: 200px;
+            flex-flow: column-reverse wrap;
+            justify-content: center;
+
+            /* Cross Axis */
+            align-items: center;
+
+            /* Mais de uma linha */
+            align-content: flex-start;
+
+        }
     </style>
 </head>
 
 <body>
-    <div class="flex-container tag nolabel">
+    <div class="flex-container">
         <div class="tag nolabel">1</div>
         <div class="tag nolabel">2</div>
         <div class="tag nolabel big">3</div>
@@ -23,7 +46,6 @@
         <div class="tag nolabel">9</div>
         <div class="tag nolabel">10</div>
     </div>
-    <script src="js/tag.js"></script>
 </body>
 
 </html>
