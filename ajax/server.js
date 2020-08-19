@@ -28,4 +28,11 @@ app.post('/upload',(req,res) => {
     })
 })
 
-app.listen(8080, () => console.log("Executando..."))
+app.post('/formulario', (req, res) => {
+    res.send({
+        ...req.body,
+        id: 1
+    })
+})
+
+app.listen(8080, () => console.log("Executando...")) 
